@@ -123,7 +123,7 @@ indicator_list_maker_knockoff <- function(
 # the smallest possible positive number of discoveries from FDP-SD
 get_i0 <- function(alpha = 0.1, c = 0.05){
   m_c <- ceiling(-log(c)/log(2))
-  ceiling((m_c-1)/alpha)
+  max(1, ceiling((m_c-1)/alpha))
 }
 
 # for non-randomised TDC-SD
